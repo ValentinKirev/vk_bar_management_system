@@ -1,7 +1,7 @@
 import json
-from exceptions import EntityNotFoundException
-from helpers import dumper
-from id_generator import IdGenerator
+from utils.exceptions import EntityNotFoundException
+from utils.helpers import dumper
+from utils.id_generator import IdGenerator
 
 
 class JsonRepository:

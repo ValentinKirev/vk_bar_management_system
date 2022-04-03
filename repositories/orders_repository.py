@@ -1,6 +1,6 @@
 from entities.order_details import OrderDetails
-from exceptions import ProductNotFoundError
-from id_generator import IdGenerator
+from utils.exceptions import ProductNotFoundError
+from utils.id_generator import IdGenerator
 from repositories.json_repository import JsonRepository
 
 

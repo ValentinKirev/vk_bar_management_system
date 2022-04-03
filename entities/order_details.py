@@ -1,4 +1,4 @@
-from validations import name_validation, only_letters_validation, integer_value_validation, float_value_validation
+from utils.validations import name_validation, only_letters_validation, integer_value_validation, float_value_validation
 
 
 class OrderDetails:

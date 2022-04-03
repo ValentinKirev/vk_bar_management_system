@@ -1,5 +1,5 @@
 from entities.order_details import OrderDetails
-from validations import date_validation
+from utils.validations import date_validation
 
 
 class DeliveryDetails(OrderDetails):

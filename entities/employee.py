@@ -1,4 +1,4 @@
-from validations import *
+from utils.validations import *
 
 
 class Employee:

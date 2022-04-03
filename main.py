@@ -8,7 +8,7 @@ from entities.hall_manager import HallManager
 from entities.manager import Manager
 from entities.order import Order
 from entities.order_details import OrderDetails
-from id_generator import IdGenerator
+from utils.id_generator import IdGenerator
 from repositories.cash_receipt_repository import CashReceiptRepository
 from repositories.deliveries_repository import DeliveryRepository
 from repositories.employees_repository import EmployeesRepository

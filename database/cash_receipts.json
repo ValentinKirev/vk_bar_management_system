@@ -19,7 +19,7 @@
             }
         ],
         "creation date": "2022-04-03",
-        "creation time": "18:15:35",
+        "creation time": "18:22:40",
         "total sum": 42.0,
         "payment_type": "Cash"
     },
@@ -43,7 +43,7 @@
             }
         ],
         "creation date": "2022-04-03",
-        "creation time": "18:15:35",
+        "creation time": "18:22:40",
         "total sum": 16,
         "payment_type": "Card"
     },
@@ -60,7 +60,7 @@
             }
         ],
         "creation date": "2022-04-03",
-        "creation time": "18:15:35",
+        "creation time": "18:22:40",
         "total sum": 10.5,
         "payment_type": "Cash"
     }

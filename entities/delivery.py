@@ -1,5 +1,5 @@
 from entities.delivery_details import DeliveryDetails
-from validations import integer_value_validation, date_validation, time_validation
+from utils.validations import integer_value_validation, date_validation, time_validation
 
 
 class Delivery:

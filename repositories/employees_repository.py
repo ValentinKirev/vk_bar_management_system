@@ -1,5 +1,5 @@
-from exceptions import UserNotFoundError
-from id_generator import IdGenerator
+from utils.exceptions import UserNotFoundError
+from utils.id_generator import IdGenerator
 from repositories.json_repository import JsonRepository
 
 

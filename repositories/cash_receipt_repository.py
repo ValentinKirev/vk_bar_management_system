@@ -1,4 +1,4 @@
-from id_generator import IdGenerator
+from utils.id_generator import IdGenerator
 from repositories.json_repository import JsonRepository
 
 
