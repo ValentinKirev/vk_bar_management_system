@@ -1,0 +1,24 @@
+[
+    {
+        "id": "2",
+        "name": "Cappuccino",
+        "type": "mix",
+        "measure unit": "mililiters",
+        "quantity": "0",
+        "expiration date": "2024.10.08",
+        "price": "2.30",
+        "ingredients": {
+            "Milk": "300",
+            "Coffee": "150"
+        }
+    },
+    {
+        "id": "3",
+        "name": "Coca cola",
+        "type": "Non alcohol drink",
+        "measure unit": "piece",
+        "quantity": "120",
+        "expiration date": "2023.12.08",
+        "price": "4.99"
+    }
+]

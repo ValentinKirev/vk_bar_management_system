@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "operator": "Ivan",
+        "ordered products": [
+            "{'product': 'cola', 'measure unit': 'piece', 'quantity': '4', 'price': '2.5', 'total price': '10.0'}"
+        ],
+        "creation date": "2022-04-03",
+        "creation time": "14:33:50",
+        "total sum": "0.00"
+    },
+    {
+        "id": "3",
+        "operator": "Elena",
+        "ordered products": [],
+        "creation date": "2022-04-03",
+        "creation time": "14:33:50",
+        "total sum": "0.00"
+    }
+]

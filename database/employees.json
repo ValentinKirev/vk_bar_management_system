@@ -1,0 +1,18 @@
+[
+    {
+        "id": " 1",
+        "first name": "Ivan",
+        "last name": "Petkov",
+        "username": "IvPet",
+        "password": "Ivpetkov1",
+        "role": "Employee"
+    },
+    {
+        "id": " 3",
+        "first name": "Dobri",
+        "last name": "Kostadinov",
+        "username": "Dobata",
+        "password": "Manager1",
+        "role": "Bartender"
+    }
+]
