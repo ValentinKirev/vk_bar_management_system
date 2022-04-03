@@ -49,6 +49,6 @@ class OrderDetails:
         float_value_validation(value, error_message)
         self.__price = value
 
-    def __str__(self):
-        return '{' + f"'product': '{self.product}', 'measure unit': '{self.measure_unit}', " \
-                     f"'quantity': '{self.quantity}', 'price': '{self.price}', 'total price': '{self.total_price}'" + '}'
+    def to_json(self):
+        return {'product': self.product, 'measure unit': self.measure_unit, 'quantity': self.quantity,
+                'price': round(self.price, 2), 'total price': round(self.total_price, 2)}

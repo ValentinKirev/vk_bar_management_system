@@ -16,3 +16,7 @@ class DeliveryDetails(OrderDetails):
         error_message = "Incorrect data format, should be YYYY.MM.DD!"
         date_validation(value, error_message)
         self.__expiration_date = value
+
+    def to_json(self):
+        return {'product': self.product, 'expiration date': self.expiration_date, 'measure unit': self.measure_unit,
+                'quantity': self.quantity, 'price': round(self.price, 2), 'total price': round(self.total_price, 2)}

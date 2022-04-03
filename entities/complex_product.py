@@ -7,9 +7,7 @@ class ComplexProduct(BaseProduct):
         super().__init__(name, type, measure_unit, quantity, expiration_date, price)
         self.ingredients = ingredients
 
-    def __str__(self):
-        ingredients = {key: str(value) for (key, value) in self.ingredients.items()}
-        return '{' + f"'id': '{self.id}', 'name': '{self.name}', 'type': '{self.type}'," \
-                     f" 'measure unit': '{self.measure_unit}', 'quantity': '{self.quantity}'," \
-                     f" 'expiration date': '{self.expiration_date}', 'price': '{self.price:.2f}', " \
-                     f"'ingredients': {ingredients}" + '}'
+    def to_json(self):
+        return {'id': self.id, 'name': self.name, 'type': self.type, 'measure unit': self.measure_unit,
+                'quantity': self.quantity, 'expiration date': self.expiration_date, 'price': round(self.price, 2),
+                'ingredients': self.ingredients}

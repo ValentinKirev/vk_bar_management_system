@@ -45,9 +45,8 @@ class Delivery:
         time_validation(value, error_message)
         self.__delivery_time = value
 
-    def __str__(self):
-        return '{' + f"'id': '{self.id}', 'delivery number': '{self.delivery_number}', " \
-                     f"'supplier': '{self.supplier}', " \
-                     f"'delivered_products': {[str(product) for product in self.delivered_products]}, " \
-                     f"'delivery date': '{self.delivery_date}', 'delivery time': '{self.delivery_time}', " \
-                     f"'tax base': '{self.tax_base:.2f}', 'VAT': '{self.vat:.2f}', 'total sum': '{self.total_sum:.2f}'" + '}'
+    def to_json(self):
+        return {'id': self.id, 'delivery number': self.delivery_number, 'supplier': self.supplier,
+                'delivered_products': self.delivered_products, 'delivery date': str(self.delivery_date),
+                'delivery time': self.delivery_time, 'tax base': round(self.tax_base, 2), 'VAT': round(self.vat, 2),
+                'total sum': round(self.total_sum, 2)}

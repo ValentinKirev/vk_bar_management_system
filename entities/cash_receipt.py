@@ -11,8 +11,7 @@ class CashReceipt:
         self.issue_time = datetime.now().strftime("%H:%M:%S")
         self.total_sum = sum(ordered_product.total_price for ordered_product in ordered_products)
 
-    def __str__(self):
-        return '{' + f"'id': '{self.id}', 'operator': '{self.operator}', " \
-                     f"'ordered products': {[str(product) for product in self.ordered_products]}, " \
-                     f"'creation date': '{self.issue_date}', 'creation time': '{self.issue_time}', " \
-                     f"'total sum': '{self.total_sum:.2f}', 'payment_type': '{self.payment_type}'" + '}'
+    def to_json(self):
+        return {'id': self.id, 'operator': self.operator, 'ordered products': self.ordered_products,
+                'creation date': str(self.issue_date), 'creation time': str(self.issue_time),
+                'total sum': round(self.total_sum, 2), 'payment_type': self.payment_type}

@@ -1,12 +1,12 @@
 from entities.order_details import OrderDetails
 from exceptions import ProductNotFoundError
 from id_generator import IdGenerator
-from repositories.base_repository import BaseRepository
+from repositories.json_repository import JsonRepository
 
 
-class OrderRepository(BaseRepository):
-    def __init__(self, id_generator: IdGenerator):
-        super().__init__(id_generator)
+class OrderRepository(JsonRepository):
+    def __init__(self, id_generator: IdGenerator, filepath):
+        super().__init__(id_generator, filepath)
 
     def update(self, order_id, product_name, measure_unit, quantity, price):
         current_order = self.find_by_id(order_id)
@@ -18,6 +18,7 @@ class OrderRepository(BaseRepository):
             current_order.ordered_products.append(ordered_product)
         finally:
             ordered_product.total_price = ordered_product.quantity * ordered_product.price
+            current_order.total_sum += quantity * ordered_product.price
         return current_order
 
     def find_by_product_name(self, order_id, product_name):

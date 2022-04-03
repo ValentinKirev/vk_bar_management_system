@@ -1,13 +1,13 @@
 from exceptions import ProductNotFoundError
 from id_generator import IdGenerator
-from repositories.base_repository import BaseRepository
+from repositories.json_repository import JsonRepository
 
 
-class ProductRepository(BaseRepository):
-    def __init__(self, id_generator: IdGenerator):
-        super().__init__(id_generator)
+class ProductRepository(JsonRepository):
+    def __init__(self, id_generator: IdGenerator, filepath):
+        super().__init__(id_generator, filepath)
 
-    def update(self, name, type, measure_unit, quantity, price, ingredients={}):
+    def update(self, name, type, measure_unit, quantity, price, ingredients):
         product = self.find_by_name(name)
         product.name = name
         product.type = type

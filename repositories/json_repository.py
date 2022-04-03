@@ -1,11 +1,18 @@
+import json
+
 from exceptions import EntityNotFoundException
+from helpers import dumper
 from id_generator import IdGenerator
 
 
-class BaseRepository:
-    def __init__(self, id_generator: IdGenerator):
+class JsonRepository:
+    def __init__(self, id_generator: IdGenerator, filepath):
         self.entities = {}
         self.id_generator = id_generator
+        self.filepath = filepath
+
+    def find_all(self):
+        return [entity for entity in self.entities.values()]
 
     def create(self, entity):
         entity.id = self.id_generator.get_next_id()
@@ -25,3 +32,7 @@ class BaseRepository:
 
     def __iter__(self):
         return iter(self.entities.values())
+
+    def save(self):
+        with open(self.filepath, 'w') as file:
+            json.dump(self.find_all(), file, indent=4, default=dumper)

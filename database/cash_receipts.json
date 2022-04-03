@@ -1,25 +1,67 @@
 [
     {
-        "id": "2",
-        "operator": "Petko",
+        "id": 1,
+        "operator": "Ivan",
         "ordered products": [
-            "{'product': 'fanta', 'measure unit': 'piece', 'quantity': '2', 'price': '3', 'total price': '6'}",
-            "{'product': 'water', 'measure unit': 'piece', 'quantity': '5', 'price': '2', 'total price': '10'}"
+            {
+                "product": "cola",
+                "measure unit": "piece",
+                "quantity": 2,
+                "price": 3.5,
+                "total price": 7.0
+            },
+            {
+                "product": "sok",
+                "measure unit": "piece",
+                "quantity": 7,
+                "price": 5,
+                "total price": 35
+            }
         ],
         "creation date": "2022-04-03",
-        "creation time": "14:33:50",
-        "total sum": "16.00",
+        "creation time": "17:59:27",
+        "total sum": 42.0,
+        "payment_type": "Cash"
+    },
+    {
+        "id": 2,
+        "operator": "Petko",
+        "ordered products": [
+            {
+                "product": "fanta",
+                "measure unit": "piece",
+                "quantity": 2,
+                "price": 3,
+                "total price": 6
+            },
+            {
+                "product": "water",
+                "measure unit": "piece",
+                "quantity": 5,
+                "price": 2,
+                "total price": 10
+            }
+        ],
+        "creation date": "2022-04-03",
+        "creation time": "17:59:27",
+        "total sum": 16,
         "payment_type": "Card"
     },
     {
-        "id": "3",
+        "id": 3,
         "operator": "Elena",
         "ordered products": [
-            "{'product': 'Beer', 'measure unit': 'piece', 'quantity': '3', 'price': '3.5', 'total price': '10.5'}"
+            {
+                "product": "Beer",
+                "measure unit": "piece",
+                "quantity": 3,
+                "price": 3.5,
+                "total price": 10.5
+            }
         ],
         "creation date": "2022-04-03",
-        "creation time": "14:33:50",
-        "total sum": "10.50",
+        "creation time": "17:59:27",
+        "total sum": 10.5,
         "payment_type": "Cash"
     }
 ]

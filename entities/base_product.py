@@ -3,7 +3,7 @@ from validations import *
 
 class BaseProduct:
     def __init__(self, name: str, type: str, measure_unit: str, quantity: int,
-                 expiration_date: str, price: float, id: int=None):
+                 expiration_date: str, price: float, id: int = None):
         self.name = name
         self.type = type
         self.measure_unit = measure_unit
@@ -72,7 +72,6 @@ class BaseProduct:
         float_value_validation(value, error_message)
         self.__price = value
 
-    def __str__(self):
-        return '{' + f"'id': '{self.id}', 'name': '{self.name}', 'type': '{self.type}'," \
-                     f" 'measure unit': '{self.measure_unit}', 'quantity': '{self.quantity}'," \
-                     f" 'expiration date': '{self.expiration_date}', 'price': '{self.price:.2f}'" + '}'
+    def to_json(self):
+        return {'id': self.id, 'name': self.name, 'type': self.type, 'measure unit': self.measure_unit,
+                'quantity': self.quantity, 'expiration date': self.expiration_date, 'price': round(self.price, 2)}

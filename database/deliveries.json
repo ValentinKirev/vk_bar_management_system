@@ -1,29 +1,70 @@
 [
     {
-        "id": "2",
-        "delivery number": "125",
+        "id": 1,
+        "delivery number": 100,
+        "supplier": "Pesho",
+        "delivered_products": [
+            {
+                "product": "juice",
+                "expiration date": "2000.12.10",
+                "measure unit": "piece",
+                "quantity": 3,
+                "price": 3.33,
+                "total price": 9.99
+            }
+        ],
+        "delivery date": "2022.10.20",
+        "delivery time": "12:33:33",
+        "tax base": 28.0,
+        "VAT": 5.6,
+        "total sum": 33.6
+    },
+    {
+        "id": 2,
+        "delivery number": 125,
         "supplier": "Agria",
         "delivered_products": [
-            "{'product': 'Coffee', 'measure unit': 'piece', 'quantity': '2', 'price': '3.5', 'total price': '7.0'}"
+            {
+                "product": "Coffee",
+                "expiration date": "2000.12.12",
+                "measure unit": "piece",
+                "quantity": 2,
+                "price": 3.5,
+                "total price": 7.0
+            }
         ],
         "delivery date": "2024.10.30",
         "delivery time": "12:56:23",
-        "tax base": "7.00",
-        "VAT": "1.40",
-        "total sum": "8.40"
+        "tax base": 7.0,
+        "VAT": 1.4,
+        "total sum": 8.4
     },
     {
-        "id": "3",
-        "delivery number": "165",
+        "id": 3,
+        "delivery number": 165,
         "supplier": "Stoqn",
         "delivered_products": [
-            "{'product': 'fanta', 'measure unit': 'piece', 'quantity': '2', 'price': '4.5', 'total price': '9.0'}",
-            "{'product': 'fresh', 'measure unit': 'piece', 'quantity': '7', 'price': '5', 'total price': '35'}"
+            {
+                "product": "fanta",
+                "expiration date": "2022.12.12",
+                "measure unit": "piece",
+                "quantity": 2,
+                "price": 4.55,
+                "total price": 9.1
+            },
+            {
+                "product": "fresh",
+                "expiration date": "2001.12.12",
+                "measure unit": "piece",
+                "quantity": 7,
+                "price": 5,
+                "total price": 35
+            }
         ],
         "delivery date": "2024.7.30",
         "delivery time": "12:56:23",
-        "tax base": "44.00",
-        "VAT": "8.80",
-        "total sum": "52.80"
+        "tax base": 44.1,
+        "VAT": 8.82,
+        "total sum": 52.92
     }
 ]

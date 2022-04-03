@@ -1,6 +1,6 @@
 [
     {
-        "id": " 1",
+        "id": 1,
         "first name": "Ivan",
         "last name": "Petkov",
         "username": "IvPet",
@@ -8,7 +8,7 @@
         "role": "Employee"
     },
     {
-        "id": " 3",
+        "id": 3,
         "first name": "Dobri",
         "last name": "Kostadinov",
         "username": "Dobata",

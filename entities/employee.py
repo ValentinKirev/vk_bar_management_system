@@ -1,4 +1,3 @@
-from entities.order_details import OrderDetails
 from validations import *
 
 
@@ -59,6 +58,6 @@ class Employee:
         password_have_upper_letter_validation(value, error_message)
         self.__password = value
 
-    def __str__(self):
-        return '{' + f"'id':' {self.id}', 'first name': '{self.first_name}', 'last name': '{self.last_name}', " \
-                     f"'username': '{self.username}', 'password': '{self.password}', 'role': '{self.role}'" + '}'
+    def to_json(self):
+        return {'id': self.id, 'first name': self.first_name, 'last name': self.last_name, 'username': self.username,
+                'password': self.password, 'role': self.role}
