@@ -1,15 +1,24 @@
 [
     {
+        "id": 1,
+        "name": "Corona",
+        "type": "Beer",
+        "measure unit": "piece",
+        "quantity": 24,
+        "expiration date": "2024.10.08",
+        "price": 4.99
+    },
+    {
         "id": 2,
         "name": "Cappuccino",
-        "type": "mix",
-        "measure unit": "milliliters",
-        "quantity": 0,
+        "type": "Hot Drink",
+        "measure unit": "piece",
+        "quantity": 5,
         "expiration date": "2024.10.08",
-        "price": 2.3,
+        "price": 14.99,
         "ingredients": {
-            "Milk": 300,
-            "Coffee": 150
+            "Milk": 200,
+            "Coffee": 100
         }
     },
     {

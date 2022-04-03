@@ -15,9 +15,9 @@
         ],
         "delivery date": "2022.10.20",
         "delivery time": "12:33:33",
-        "tax base": 28.0,
-        "VAT": 5.6,
-        "total sum": 33.6
+        "tax base": 9.99,
+        "VAT": 2.0,
+        "total sum": 11.99
     },
     {
         "id": 2,

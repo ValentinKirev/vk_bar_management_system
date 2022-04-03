@@ -1,5 +1,4 @@
 import json
-
 from exceptions import EntityNotFoundException
 from helpers import dumper
 from id_generator import IdGenerator
@@ -36,3 +35,9 @@ class JsonRepository:
     def save(self):
         with open(self.filepath, 'w') as file:
             json.dump(self.find_all(), file, indent=4, default=dumper)
+
+    def load(self):
+        with open(self.filepath, 'r') as file:
+            data = json.load(file)
+            for element in data:
+                print(element)

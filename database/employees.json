@@ -8,11 +8,19 @@
         "role": "Employee"
     },
     {
+        "id": 2,
+        "first name": "Stefan",
+        "last name": "Ivanov",
+        "username": "Stefoto",
+        "password": "Stefan123",
+        "role": "HallManager"
+    },
+    {
         "id": 3,
         "first name": "Dobri",
         "last name": "Kostadinov",
         "username": "Dobata",
         "password": "Manager1",
-        "role": "Bartender"
+        "role": "Manager"
     }
 ]

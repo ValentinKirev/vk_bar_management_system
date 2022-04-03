@@ -19,15 +19,23 @@
             }
         ],
         "creation date": "2022-04-03",
-        "creation time": "17:59:27",
+        "creation time": "18:15:35",
         "total sum": 15.0
+    },
+    {
+        "id": 2,
+        "operator": "Petko",
+        "ordered products": [],
+        "creation date": "2022-04-03",
+        "creation time": "18:15:35",
+        "total sum": 0
     },
     {
         "id": 3,
         "operator": "Elena",
         "ordered products": [],
         "creation date": "2022-04-03",
-        "creation time": "17:59:27",
+        "creation time": "18:15:35",
         "total sum": 0
     }
 ]

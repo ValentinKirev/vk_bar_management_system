@@ -13,6 +13,9 @@ class DeliveryRepository(JsonRepository):
         delivery.delivered_products = delivered_products
         delivery.delivery_date = delivery_date
         delivery.delivery_time = delivery_time
+        delivery.tax_base = sum(delivered_product.total_price for delivered_product in delivered_products)
+        delivery.vat = delivery.tax_base * 0.20
+        delivery.total_sum = delivery.tax_base + delivery.vat
 
     def find_by_delivery_number(self, delivery_number):
         for delivery in self.entities.values():
