@@ -1,16 +1,16 @@
 [
     {
         "id": 1,
-        "name": "Corona",
-        "type": "Beer",
+        "name": "coca-cola",
+        "type": "Non alcohol drink",
         "measure unit": "piece",
-        "quantity": 24,
-        "expiration date": "2024.10.08",
-        "price": 4.99,
+        "quantity": 250,
+        "expiration date": "2023.12.08",
+        "price": 3,
         "ingredients": [
             {
                 "id": null,
-                "name": "Corona",
+                "name": "coca-cola",
                 "quantity": 1,
                 "measure unit": "piece",
                 "_class": "Ingredient",
@@ -27,44 +27,25 @@
         "measure unit": "piece",
         "quantity": 5,
         "expiration date": "2024.10.08",
-        "price": 14.99,
+        "price": 3.5,
         "ingredients": [
             {
-                "id": null,
-                "name": "Milk",
-                "quantity": 100,
-                "measure unit": "mililiters",
+                "id": 3,
+                "name": "milk",
+                "quantity": 10,
+                "measure unit": "liters",
                 "_class": "Ingredient",
                 "_module": "entities.ingredient"
             },
             {
-                "id": null,
-                "name": "Coffee",
-                "quantity": 100,
-                "measure unit": "grams",
+                "id": 1,
+                "name": "coffee",
+                "quantity": 6,
+                "measure unit": "kilograms",
                 "_class": "Ingredient",
                 "_module": "entities.ingredient"
             }
         ],
-        "_class": "Product",
-        "_module": "entities.product"
-    },
-    {
-        "id": 3,
-        "name": "Coca cola",
-        "type": "Non alcohol drink",
-        "measure unit": "piece",
-        "quantity": 120,
-        "expiration date": "2023.12.08",
-        "price": 4.99,
-        "ingredients": {
-            "id": null,
-            "name": "Coca cola",
-            "quantity": 1,
-            "measure unit": "piece",
-            "_class": "Ingredient",
-            "_module": "entities.ingredient"
-        },
         "_class": "Product",
         "_module": "entities.product"
     }

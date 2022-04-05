@@ -1,32 +1,22 @@
 [
     {
         "id": 1,
-        "first name": "Ivan",
-        "last name": "Petkov",
-        "username": "IvPet",
-        "password": "Ivpetkov1",
+        "first name": "Valentin",
+        "last name": "Kirev",
+        "username": "Valdes",
+        "password": "Valdes30",
         "role": "Employee",
         "_class": "Employee",
         "_module": "entities.employee"
     },
     {
         "id": 2,
-        "first name": "Stefan",
-        "last name": "Ivanov",
-        "username": "Stefoto",
-        "password": "Stefan123",
-        "role": "HallManager",
-        "_class": "HallManager",
-        "_module": "entities.hall_manager"
-    },
-    {
-        "id": 3,
-        "first name": "Dobri",
-        "last name": "Kostadinov",
-        "username": "Dobata",
-        "password": "Manager1",
-        "role": "Manager",
-        "_class": "Manager",
-        "_module": "entities.manager"
+        "first name": "Spas",
+        "last name": "Dimitrov",
+        "username": "Spas40",
+        "password": "Spas40",
+        "role": "Employee",
+        "_class": "Employee",
+        "_module": "entities.employee"
     }
 ]

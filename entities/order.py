@@ -4,7 +4,7 @@ from entities.order_details import OrderDetails
 
 
 class Order:
-    def __init__(self, operator: str, ordered_products: [OrderDetails],creation_date=date.today(),
+    def __init__(self, operator: str, ordered_products: [OrderDetails], creation_date=date.today(),
                  creation_time=datetime.now().strftime("%H:%M:%S"), total_sum: float=0, id: int=None):
         self.operator = operator
         self.ordered_products = ordered_products

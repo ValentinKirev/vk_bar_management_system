@@ -68,3 +68,8 @@ def password_have_upper_letter_validation(value, error_message):
             upper_letter_is_present = True
     if not upper_letter_is_present:
         raise ValueError(error_message)
+
+
+def quantity_is_positive_number_validation(value, error_message):
+    if value <= 0:
+        raise ValueError(error_message)

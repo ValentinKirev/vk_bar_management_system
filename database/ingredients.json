@@ -1,24 +1,32 @@
 [
     {
         "id": 1,
-        "name": "Coffee",
-        "quantity": 1000,
-        "measure unit": "grams",
+        "name": "coffee",
+        "quantity": 9,
+        "measure unit": "kilograms",
         "_class": "Ingredient",
         "_module": "entities.ingredient"
     },
     {
         "id": 2,
-        "name": "Milk",
-        "quantity": 1000,
-        "measure unit": "mililiters",
+        "name": "coca-cola",
+        "quantity": 190,
+        "measure unit": "piece",
         "_class": "Ingredient",
         "_module": "entities.ingredient"
     },
     {
         "id": 3,
-        "name": "Cola",
+        "name": "milk",
         "quantity": 10,
+        "measure unit": "liters",
+        "_class": "Ingredient",
+        "_module": "entities.ingredient"
+    },
+    {
+        "id": 4,
+        "name": "fanta",
+        "quantity": 200,
         "measure unit": "piece",
         "_class": "Ingredient",
         "_module": "entities.ingredient"

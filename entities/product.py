@@ -54,6 +54,8 @@ class Product:
     def quantity(self, value):
         error_message = "Quantity must be integer number!"
         integer_value_validation(value, error_message)
+        error_message = 'Quantity must be positive number!'
+        quantity_is_positive_number_validation(value, error_message)
         self.__quantity = value
 
     @property

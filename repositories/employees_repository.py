@@ -19,3 +19,9 @@ class EmployeesRepository(JsonRepository):
             if user.username == username:
                 return user
         raise UserNotFoundError(f'User with username: {username} was not found!')
+
+    def check_for_existing(self, username):
+        for user in self.entities.values():
+            if user.username == username:
+                return True
+        return False

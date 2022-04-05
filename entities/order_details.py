@@ -1,4 +1,5 @@
-from utils.validations import name_validation, only_letters_validation, integer_value_validation, float_value_validation
+from utils.validations import name_validation, only_letters_validation, integer_value_validation, \
+    float_value_validation, quantity_is_positive_number_validation
 
 
 class OrderDetails:
@@ -39,6 +40,8 @@ class OrderDetails:
     def quantity(self, value):
         error_message = "Quantity must be integer number!"
         integer_value_validation(value, error_message)
+        error_message = 'Quantity must be positive number!'
+        quantity_is_positive_number_validation(value, error_message)
         self.__quantity = value
 
     @property
