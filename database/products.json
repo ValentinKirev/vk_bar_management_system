@@ -6,7 +6,19 @@
         "measure unit": "piece",
         "quantity": 24,
         "expiration date": "2024.10.08",
-        "price": 4.99
+        "price": 4.99,
+        "ingredients": [
+            {
+                "id": null,
+                "name": "Corona",
+                "quantity": 1,
+                "measure unit": "piece",
+                "_class": "Ingredient",
+                "_module": "entities.ingredient"
+            }
+        ],
+        "_class": "Product",
+        "_module": "entities.product"
     },
     {
         "id": 2,
@@ -16,10 +28,26 @@
         "quantity": 5,
         "expiration date": "2024.10.08",
         "price": 14.99,
-        "ingredients": {
-            "Milk": 200,
-            "Coffee": 100
-        }
+        "ingredients": [
+            {
+                "id": null,
+                "name": "Milk",
+                "quantity": 100,
+                "measure unit": "mililiters",
+                "_class": "Ingredient",
+                "_module": "entities.ingredient"
+            },
+            {
+                "id": null,
+                "name": "Coffee",
+                "quantity": 100,
+                "measure unit": "grams",
+                "_class": "Ingredient",
+                "_module": "entities.ingredient"
+            }
+        ],
+        "_class": "Product",
+        "_module": "entities.product"
     },
     {
         "id": 3,
@@ -28,6 +56,16 @@
         "measure unit": "piece",
         "quantity": 120,
         "expiration date": "2023.12.08",
-        "price": 4.99
+        "price": 4.99,
+        "ingredients": {
+            "id": null,
+            "name": "Coca cola",
+            "quantity": 1,
+            "measure unit": "piece",
+            "_class": "Ingredient",
+            "_module": "entities.ingredient"
+        },
+        "_class": "Product",
+        "_module": "entities.product"
     }
 ]

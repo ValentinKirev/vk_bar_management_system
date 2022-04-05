@@ -2,55 +2,65 @@
     {
         "id": 1,
         "delivery number": 100,
-        "supplier": "Pesho",
-        "delivered_products": [
+        "supplier": "Ivan",
+        "delivered products": [
             {
-                "product": "juice",
-                "expiration date": "2000.12.10",
+                "product": "cola",
+                "expiration date": "2000.12.12",
                 "measure unit": "piece",
-                "quantity": 3,
-                "price": 3.33,
-                "total price": 9.99
+                "quantity": 10,
+                "price": 2.5,
+                "total price": 25.0,
+                "_class": "DeliveryDetails",
+                "_module": "entities.delivery_details"
             }
         ],
-        "delivery date": "2022.10.20",
-        "delivery time": "12:33:33",
-        "tax base": 9.99,
-        "VAT": 2.0,
-        "total sum": 11.99
+        "delivery date": "2024.10.30",
+        "delivery time": "12:56:23",
+        "tax base": 25.0,
+        "VAT": 5.0,
+        "total sum": 30.0,
+        "_class": "Delivery",
+        "_module": "entities.delivery"
     },
     {
         "id": 2,
         "delivery number": 125,
         "supplier": "Agria",
-        "delivered_products": [
+        "delivered products": [
             {
                 "product": "Coffee",
                 "expiration date": "2000.12.12",
                 "measure unit": "piece",
                 "quantity": 2,
                 "price": 3.5,
-                "total price": 7.0
+                "total price": 7.0,
+                "_class": "DeliveryDetails",
+                "_module": "entities.delivery_details"
             }
         ],
         "delivery date": "2024.10.30",
         "delivery time": "12:56:23",
         "tax base": 7.0,
         "VAT": 1.4,
-        "total sum": 8.4
+        "total sum": 8.4,
+        "_class": "Delivery",
+        "_module": "entities.delivery"
     },
     {
         "id": 3,
         "delivery number": 165,
         "supplier": "Stoqn",
-        "delivered_products": [
+        "delivered products": [
             {
                 "product": "fanta",
                 "expiration date": "2022.12.12",
                 "measure unit": "piece",
                 "quantity": 2,
                 "price": 4.55,
-                "total price": 9.1
+                "total price": 9.1,
+                "_class": "DeliveryDetails",
+                "_module": "entities.delivery_details"
             },
             {
                 "product": "fresh",
@@ -58,13 +68,17 @@
                 "measure unit": "piece",
                 "quantity": 7,
                 "price": 5,
-                "total price": 35
+                "total price": 35,
+                "_class": "DeliveryDetails",
+                "_module": "entities.delivery_details"
             }
         ],
         "delivery date": "2024.7.30",
         "delivery time": "12:56:23",
         "tax base": 44.1,
         "VAT": 8.82,
-        "total sum": 52.92
+        "total sum": 52.92,
+        "_class": "Delivery",
+        "_module": "entities.delivery"
     }
 ]

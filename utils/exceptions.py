@@ -12,3 +12,7 @@ class ProductNotFoundError(Exception):
 
 class DeliveryNotFoundError(Exception):
     pass
+
+
+class IngredientNotFoundError(Exception):
+    pass

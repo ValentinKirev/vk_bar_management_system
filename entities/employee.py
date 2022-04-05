@@ -9,6 +9,8 @@ class Employee:
         self.password = password
         self.role = 'Employee'
         self.id = id
+        self._module = self.__class__.__module__
+        self._class = self.__class__.__name__
 
     @property
     def first_name(self):
@@ -60,4 +62,15 @@ class Employee:
 
     def to_json(self):
         return {'id': self.id, 'first name': self.first_name, 'last name': self.last_name, 'username': self.username,
-                'password': self.password, 'role': self.role}
+                'password': self.password, 'role': self.role, '_class': self._class, '_module': self._module}
+
+    @classmethod
+    def from_json(cls, jsdict):
+        id = jsdict['id']
+        first_name = jsdict['first name']
+        last_name = jsdict['last name']
+        username = jsdict['username']
+        password = jsdict['password']
+        _module = jsdict['_module']
+        _class = jsdict['_class']
+        return cls(first_name, last_name, username, password, id)

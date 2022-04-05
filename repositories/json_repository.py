@@ -1,6 +1,6 @@
 import json
 from utils.exceptions import EntityNotFoundException
-from utils.helpers import dumper
+from utils.helpers import dumper, object_hook
 from utils.id_generator import IdGenerator
 
 
@@ -14,9 +14,14 @@ class JsonRepository:
         return [entity for entity in self.entities.values()]
 
     def create(self, entity):
-        entity.id = self.id_generator.get_next_id()
+        if entity.id is None:
+            entity.id = self.id_generator.get_next_id()
         self.entities[entity.id] = entity
         return entity
+
+    def add_all(self, entities):
+        for entity in entities:
+            self.entities[entity.id] = entity
 
     def find_by_id(self, id):
         found = self.entities.get(id)
@@ -29,6 +34,9 @@ class JsonRepository:
         del self.entities[id]
         return old
 
+    def clear(self):
+        self.entities.clear()
+
     def __iter__(self):
         return iter(self.entities.values())
 
@@ -37,7 +45,8 @@ class JsonRepository:
             json.dump(self.find_all(), file, indent=4, default=dumper)
 
     def load(self):
-        with open(self.filepath, 'r') as file:
-            data = json.load(file)
-            for element in data:
-                print(element)
+        self.clear()
+        with open(self.filepath, "rt", encoding="utf-8") as file:
+            entities = json.load(file, object_hook=object_hook)
+            for entity in entities:
+                self.create(entity)

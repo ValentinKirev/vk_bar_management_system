@@ -7,35 +7,74 @@
                 "product": "cola",
                 "measure unit": "piece",
                 "quantity": 2,
-                "price": 2.5,
-                "total price": 5.0
+                "price": 3.5,
+                "total price": 7.0,
+                "_class": "OrderDetails",
+                "_module": "entities.order_details"
             },
             {
-                "product": "juice",
+                "product": "sok",
                 "measure unit": "piece",
-                "quantity": 4,
-                "price": 2.5,
-                "total price": 10.0
+                "quantity": 7,
+                "price": 5,
+                "total price": 35,
+                "_class": "OrderDetails",
+                "_module": "entities.order_details"
             }
         ],
-        "creation date": "2022-04-03",
-        "creation time": "18:22:40",
-        "total sum": 15.0
+        "creation date": "2022-04-05",
+        "creation time": "12:44:09",
+        "total sum": 42.0,
+        "_class": "Order",
+        "_module": "entities.order"
     },
     {
         "id": 2,
         "operator": "Petko",
-        "ordered products": [],
-        "creation date": "2022-04-03",
-        "creation time": "18:22:40",
-        "total sum": 0
+        "ordered products": [
+            {
+                "product": "fanta",
+                "measure unit": "piece",
+                "quantity": 2,
+                "price": 3,
+                "total price": 6,
+                "_class": "OrderDetails",
+                "_module": "entities.order_details"
+            },
+            {
+                "product": "water",
+                "measure unit": "piece",
+                "quantity": 5,
+                "price": 2,
+                "total price": 10,
+                "_class": "OrderDetails",
+                "_module": "entities.order_details"
+            }
+        ],
+        "creation date": "2022-04-05",
+        "creation time": "12:44:09",
+        "total sum": 16,
+        "_class": "Order",
+        "_module": "entities.order"
     },
     {
         "id": 3,
         "operator": "Elena",
-        "ordered products": [],
-        "creation date": "2022-04-03",
-        "creation time": "18:22:40",
-        "total sum": 0
+        "ordered products": [
+            {
+                "product": "Beer",
+                "measure unit": "piece",
+                "quantity": 3,
+                "price": 3.5,
+                "total price": 10.5,
+                "_class": "OrderDetails",
+                "_module": "entities.order_details"
+            }
+        ],
+        "creation date": "2022-04-05",
+        "creation time": "12:44:09",
+        "total sum": 10.5,
+        "_class": "Order",
+        "_module": "entities.order"
     }
 ]

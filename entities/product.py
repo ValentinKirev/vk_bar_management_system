@@ -1,16 +1,20 @@
+from entities.ingredient import Ingredient
 from utils.validations import *
 
 
-class BaseProduct:
+class Product:
     def __init__(self, name: str, type: str, measure_unit: str, quantity: int,
-                 expiration_date: str, price: float, id: int = None):
+                 expiration_date: str, price: float, ingredients: [Ingredient], id: int = None):
         self.name = name
         self.type = type
         self.measure_unit = measure_unit
         self.quantity = quantity
         self.expiration_date = expiration_date
         self.price = price
+        self.ingredients = ingredients
         self.id = id
+        self._module = self.__class__.__module__
+        self._class = self.__class__.__name__
 
     @property
     def name(self):
@@ -74,4 +78,19 @@ class BaseProduct:
 
     def to_json(self):
         return {'id': self.id, 'name': self.name, 'type': self.type, 'measure unit': self.measure_unit,
-                'quantity': self.quantity, 'expiration date': self.expiration_date, 'price': round(self.price, 2)}
+                'quantity': self.quantity, 'expiration date': self.expiration_date, 'price': round(self.price, 2),
+                'ingredients': self.ingredients, '_class': self._class, '_module': self._module}
+
+    @classmethod
+    def from_json(cls, jsdict):
+        id = jsdict['id']
+        name = jsdict['name']
+        type = jsdict['type']
+        measure_unit = jsdict['measure unit']
+        quantity = jsdict['quantity']
+        expiration_date = jsdict['expiration date']
+        price = jsdict['price']
+        ingredients = jsdict['ingredients']
+        _module = jsdict['_module']
+        _class = jsdict['_class']
+        return cls(name, type, measure_unit, quantity, expiration_date, price, ingredients, id)

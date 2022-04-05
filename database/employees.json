@@ -5,7 +5,9 @@
         "last name": "Petkov",
         "username": "IvPet",
         "password": "Ivpetkov1",
-        "role": "Employee"
+        "role": "Employee",
+        "_class": "Employee",
+        "_module": "entities.employee"
     },
     {
         "id": 2,
@@ -13,7 +15,9 @@
         "last name": "Ivanov",
         "username": "Stefoto",
         "password": "Stefan123",
-        "role": "HallManager"
+        "role": "HallManager",
+        "_class": "HallManager",
+        "_module": "entities.hall_manager"
     },
     {
         "id": 3,
@@ -21,6 +25,8 @@
         "last name": "Kostadinov",
         "username": "Dobata",
         "password": "Manager1",
-        "role": "Manager"
+        "role": "Manager",
+        "_class": "Manager",
+        "_module": "entities.manager"
     }
 ]
