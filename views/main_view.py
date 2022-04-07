@@ -1,0 +1,26 @@
+import tkinter as tk
+from tkinter import ttk
+from PIL import Image, ImageTk
+
+
+class MainView(tk.Frame):
+    def __init__(self, master):
+        super().__init__()
+        self.master = master
+
+        self.logo_image = Image.open('database/logo.jpg').resize(size=(700, 600))
+        self.logo = ImageTk.PhotoImage(self.logo_image)
+        self.image_label = ttk.Label(image=self.logo, background='lightblue')
+        self.image_label.pack()
+
+        self.login_button = tk.Button(text='LOGIN', font='bold', width=20, background='green yellow')
+        self.login_button.pack(pady=10)
+
+        self.register_button = tk.Button(text='REGISTER', font='bold', width=20, background='green yellow')
+        self.register_button.pack()
+
+        self.about = tk.Button(text='ABOUT', font='bold', width=10, background='green yellow')
+        self.about.pack(side='right', anchor='s')
+
+        self.about = tk.Button(text='HELP', font='bold', width=10, background='green yellow')
+        self.about.pack(side='left', anchor='s')

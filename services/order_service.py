@@ -1,8 +1,7 @@
 from entities.order import Order
-from entities.product import Product
+from entities.order_details import OrderDetails
 from repositories.orders_repository import OrderRepository
 from repositories.products_repository import ProductRepository
-from utils.exceptions import ProductNotFoundError
 
 
 class OrderService:
@@ -11,9 +10,6 @@ class OrderService:
         self.product_repository = product_repository
 
     def open_new_order(self, order: Order):
-        for ordered_product in order.ordered_products:
-            if not self.product_repository.check_for_existing(ordered_product.product):
-                raise ProductNotFoundError(f'Product with name {ordered_product.product} does not exist!')
         self.orders_repository.create(order)
         self.save_orders()
 
@@ -23,9 +19,9 @@ class OrderService:
     def reload_orders(self):
         self.orders_repository.load()
 
-    def update_order(self, order_id, product: Product, quantity):
-        existing_product = self.product_repository.find_by_name(product.name)
-        self.orders_repository.update(order_id, existing_product, quantity)
+    def update_order(self, order_id, ordered_detail: OrderDetails):
+        self.product_repository.find_by_name(ordered_detail.product)
+        self.orders_repository.update(order_id, ordered_detail)
         self.save_orders()
 
     def remove_order_by_id(self, order_id):

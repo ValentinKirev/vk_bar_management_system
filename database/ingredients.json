@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "coca-cola",
-        "quantity": 190,
+        "quantity": 198,
         "measure unit": "piece",
         "_class": "Ingredient",
         "_module": "entities.ingredient"

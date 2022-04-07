@@ -6,17 +6,17 @@
             {
                 "product": "coca-cola",
                 "measure unit": "piece",
-                "quantity": 10,
-                "price": 3.5,
-                "total price": 35.0,
+                "quantity": 2,
+                "price": 3,
+                "total price": 6,
                 "_class": "OrderDetails",
                 "_module": "entities.order_details"
             }
         ],
-        "issue date": "2022-04-05",
-        "issue time": "21:41:45",
-        "total sum": 35.0,
-        "payment_type": "Cash",
+        "issue date": "2022-04-07",
+        "issue time": "19:57:41",
+        "total sum": 6,
+        "payment type": "Cash",
         "_class": "CashReceipt",
         "_module": "entities.cash_receipt"
     }
