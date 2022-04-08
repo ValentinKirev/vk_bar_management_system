@@ -8,12 +8,13 @@ class LoginService:
         self.current_logged_user = None
 
     def login(self, username, password):
-        if self.employees_repository.check_for_existing(username):
-            user = self.employees_repository.find_by_username(username)
+        self.employees_repository.load()
+        user = self.employees_repository.find_by_username(username)
+        if user:
             if user.password == password:
                 self.current_logged_user = user
                 return user
-        raise InvalidCredentials('Invalid username or password, please try again!')
+        raise InvalidCredentials('Invalid password, please try again!')
 
     def logout(self):
         self.current_logged_user = None

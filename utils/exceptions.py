@@ -6,7 +6,7 @@ class UserNotFoundError(Exception):
     pass
 
 
-class UsertAlreadyExist(Exception):
+class UserAlreadyExist(Exception):
     pass
 
 
@@ -35,4 +35,12 @@ class InvalidCredentials(Exception):
 
 
 class PasswordsAreNotEqual(Exception):
+    pass
+
+
+class InvalidRole(Exception):
+    pass
+
+
+class WrongServicePassword(Exception):
     pass

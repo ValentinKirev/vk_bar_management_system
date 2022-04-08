@@ -22,3 +22,9 @@ def center_window(window):
     y = window.winfo_screenheight() // 2 - win_height // 2
     window.geometry(f'{width}x{height}+{x}+{y}')
     window.deiconify()
+
+
+def destroy_widgets(window):
+    for child in window.winfo_children():
+        child.destroy()
+

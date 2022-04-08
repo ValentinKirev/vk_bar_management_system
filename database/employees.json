@@ -4,19 +4,9 @@
         "first name": "Valentin",
         "last name": "Kirev",
         "username": "Valdes",
-        "password": "Valdes30",
-        "role": "Employee",
-        "_class": "Employee",
-        "_module": "entities.employee"
-    },
-    {
-        "id": 2,
-        "first name": "Spas",
-        "last name": "Dimitrov",
-        "username": "Spas40",
-        "password": "Spas40",
-        "role": "Employee",
-        "_class": "Employee",
-        "_module": "entities.employee"
+        "password": "Davq4a92",
+        "role": "Manager",
+        "_class": "Manager",
+        "_module": "entities.manager"
     }
 ]

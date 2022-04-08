@@ -2,21 +2,26 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
 
+from views.commands.render_login_command import RenderLoginCommand
+from views.commands.render_register_command import RenderRegisterCommand
+
 
 class MainView(tk.Frame):
     def __init__(self, master):
         super().__init__()
         self.master = master
 
-        self.logo_image = Image.open('database/logo.jpg').resize(size=(700, 600))
+        self.logo_image = Image.open('database/logo.jpg').resize(size=(450, 450))
         self.logo = ImageTk.PhotoImage(self.logo_image)
         self.image_label = ttk.Label(image=self.logo, background='lightblue')
         self.image_label.pack()
 
-        self.login_button = tk.Button(text='LOGIN', font='bold', width=20, background='green yellow')
+        self.login_button = tk.Button(text='LOGIN', font='bold', width=20, background='green yellow',
+                                      command=RenderLoginCommand(self.master))
         self.login_button.pack(pady=10)
 
-        self.register_button = tk.Button(text='REGISTER', font='bold', width=20, background='green yellow')
+        self.register_button = tk.Button(text='REGISTER', font='bold', width=20, background='green yellow',
+                                         command=RenderRegisterCommand(self.master))
         self.register_button.pack()
 
         self.about = tk.Button(text='ABOUT', font='bold', width=10, background='green yellow')

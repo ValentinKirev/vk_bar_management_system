@@ -1,6 +1,6 @@
 from entities.employee import Employee
 from repositories.employees_repository import EmployeesRepository
-from utils.exceptions import UsertAlreadyExist
+from utils.exceptions import UserAlreadyExist
 
 
 class EmployeeService:
@@ -9,7 +9,7 @@ class EmployeeService:
 
     def add_new_employee(self, employee: Employee):
         if self.employees_repository.check_for_existing(employee.username):
-            raise UsertAlreadyExist(f'User with username {employee.username} already exist!')
+            raise UserAlreadyExist(f'User with username {employee.username} already exist!')
         self.employees_repository.create(employee)
         self.save_employees()
 
