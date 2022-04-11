@@ -14,8 +14,7 @@ class JsonRepository:
         return [entity for entity in self.entities.values()]
 
     def create(self, entity):
-        if entity.id is None:
-            entity.id = self.id_generator.get_next_id()
+        entity.id = self.id_generator.get_next_id()
         self.entities[entity.id] = entity
         return entity
 

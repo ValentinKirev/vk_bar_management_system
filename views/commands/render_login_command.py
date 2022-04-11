@@ -1,16 +1,13 @@
-from controllers.login_controller import LoginController
-from repositories.employees_repository import EmployeesRepository
-from services.login_service import LoginService
+from controllers.main_controller import MainController
 from utils.helpers import destroy_widgets
-from utils.id_generator import IdGenerator
 from views.login_view import LoginView
 
 
 class RenderLoginCommand:
-    def __init__(self, window):
+    def __init__(self, window, controller: MainController):
         self.window = window
+        self.controller = controller
 
     def __call__(self, *args, **kwargs):
         destroy_widgets(self.window)
-        LoginView(LoginController(LoginService(EmployeesRepository(IdGenerator(),
-                                                                                   'database/employees.json'))))
+        self.controller.view = LoginView(self.controller)

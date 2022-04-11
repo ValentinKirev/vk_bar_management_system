@@ -1,15 +1,13 @@
-from controllers.register_controller import RegisterController
-from repositories.employees_repository import EmployeesRepository
-from services.register_service import RegisterService
+from controllers.main_controller import MainController
 from utils.helpers import destroy_widgets
-from utils.id_generator import IdGenerator
 from views.register_view import RegisterView
 
 
 class RenderRegisterCommand:
-    def __init__(self, window):
+    def __init__(self, window, controller: MainController):
         self.window = window
+        self.controller = controller
 
     def __call__(self, *args, **kwargs):
         destroy_widgets(self.window)
-        RegisterView(RegisterController(RegisterService(EmployeesRepository(IdGenerator(), 'database/employees.json'))))
+        self.controller.view = RegisterView(self.controller)

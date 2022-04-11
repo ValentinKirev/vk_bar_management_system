@@ -23,10 +23,13 @@ class RegisterService:
                 raise UserAlreadyExist(f'User with username {username} already exist!')
         else:
             raise WrongServicePassword('Wrong service password!')
-
+        self.reload_employees()
         new_user = self.employees_repository.create(accounts_types[role](first_name, last_name, username, password))
         self.save_employee()
         return new_user
 
     def save_employee(self):
         self.employees_repository.save()
+
+    def reload_employees(self):
+        self.employees_repository.load()

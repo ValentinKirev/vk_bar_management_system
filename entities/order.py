@@ -1,7 +1,5 @@
 from datetime import date, datetime
 
-from entities.order_details import OrderDetails
-
 
 class Order:
     def __init__(self, operator: str, ordered_products=[], creation_date=date.today(),
@@ -14,6 +12,7 @@ class Order:
         self.total_sum = sum([ordered_product.total_price for ordered_product in self.ordered_products])
         self._module = self.__class__.__module__
         self._class = self.__class__.__name__
+        self.table_number = 0
 
     def to_json(self):
         return {'id': self.id, 'operator': self.operator, 'ordered products': self.ordered_products,
