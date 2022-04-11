@@ -9,13 +9,15 @@ from utils.id_generator import IdGenerator
 from views.commands.create_order_command import CreateOrderCommand
 
 
+order_controller = OrderController(OrderService(OrderRepository(IdGenerator(), 'database/orders.json'),
+                                                    ProductRepository(IdGenerator(), 'database/products.json')))
+
 class OrdersView(tk.Canvas):
     def __init__(self, controller: MainController):
         super().__init__()
         self.controller = controller
         self.operator = self.controller.login_service.get_current_logged_user()
-        self.controller = OrderController(OrderService(OrderRepository(IdGenerator(), 'database/orders.json'),
-                                                       ProductRepository(IdGenerator(), 'database/products.json')))
+        self.controller = order_controller
         self.controller.view = self
 
         column = 0
