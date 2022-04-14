@@ -8,10 +8,12 @@ class IngredientService:
         self.ingredients_repository = ingredients_repository
 
     def add_ingredient(self, ingredient: Ingredient):
+        self.ingredients_repository.load()
         if self.ingredients_repository.check_for_existing(ingredient.name):
             raise IngredientAlreadyExist('Ingredient is already in repository!')
         self.ingredients_repository.create(ingredient)
         self.save_ingredients()
+        return ingredient
 
     def get_all_ingredients(self):
         return self.ingredients_repository.find_all()

@@ -6,7 +6,7 @@ from controllers.main_controller import MainController
 from views.commands.register_command import RegisterCommand
 
 
-class RegisterView(ttk.Frame):
+class RegisterView(tk.Canvas):
     def __init__(self, controller: MainController):
         super().__init__()
         self.controller = controller
@@ -76,7 +76,7 @@ class RegisterView(ttk.Frame):
                                          command=RegisterCommand(self.controller, self.master))
         self.register_button.grid(row=10, column=2, ipady=5)
 
-        self.empty_label = ttk.Label(text='', background='lightblue')
+        self.empty_label = ttk.Label(text='    ', background='lightblue')
         self.empty_label.grid(row=11, column=2)
 
         # add logo image

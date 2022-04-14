@@ -20,5 +20,5 @@ class LoginService:
         self.current_logged_user = None
 
     def get_current_logged_user(self):
-        current_user = f"{self.current_logged_user.first_name} {self.current_logged_user.last_name}"
+        current_user = self.current_logged_user
         return current_user

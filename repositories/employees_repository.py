@@ -4,7 +4,7 @@ from repositories.json_repository import JsonRepository
 
 
 class EmployeesRepository(JsonRepository):
-    def __init__(self, id_generator: IdGenerator, filepath):
+    def __init__(self, id_generator=IdGenerator(), filepath='database.employees.json'):
         super().__init__(id_generator, filepath)
 
     def update(self, username, role):
@@ -18,7 +18,7 @@ class EmployeesRepository(JsonRepository):
         for user in self.entities.values():
             if user.username == username:
                 return user
-        raise UserNotFoundError(f'User with username: {username} was not found!')
+        raise UserNotFoundError(f'User with username {username} was not found!')
 
     def check_for_existing(self, username):
         for user in self.entities.values():

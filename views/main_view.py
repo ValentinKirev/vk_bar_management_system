@@ -7,7 +7,7 @@ from views.commands.render_login_command import RenderLoginCommand
 from views.commands.render_register_command import RenderRegisterCommand
 
 
-class MainView(tk.Frame):
+class MainView(tk.Canvas):
     def __init__(self, master, controller: MainController):
         super().__init__()
         self.master = master

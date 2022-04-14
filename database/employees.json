@@ -8,5 +8,25 @@
         "role": "Manager",
         "_class": "Manager",
         "_module": "entities.manager"
+    },
+    {
+        "id": 2,
+        "first name": "Kiril",
+        "last name": "Kirilov",
+        "username": "Kircho",
+        "password": "Davq4a92",
+        "role": "Employee",
+        "_class": "Employee",
+        "_module": "entities.employee"
+    },
+    {
+        "id": 3,
+        "first name": "Desislava",
+        "last name": "Koleva",
+        "username": "Desiss",
+        "password": "Desiss1",
+        "role": "HallManager",
+        "_class": "HallManager",
+        "_module": "entities.hall_manager"
     }
 ]

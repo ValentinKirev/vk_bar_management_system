@@ -10,12 +10,12 @@ class ProductService:
         self.ingredients_repository = ingredients_repository
 
     def add_product(self, product: Product):
-        for ingredient in product.ingredients:
-            self.ingredients_repository.find_by_ingredient_name(ingredient.name)
+        self.products_repository.load()
         if self.products_repository.check_for_existing(product.name):
-            raise ProductAlreadyExist('Product is already in repository!')
+            raise ProductAlreadyExist('Product is already added!')
         self.products_repository.create(product)
         self.save_products()
+        return product
 
     def get_all_products(self):
         return self.products_repository.find_all()

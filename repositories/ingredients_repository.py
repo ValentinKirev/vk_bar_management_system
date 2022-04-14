@@ -1,10 +1,9 @@
 from repositories.json_repository import JsonRepository
 from utils.exceptions import IngredientNotFoundError
-from utils.id_generator import IdGenerator
 
 
 class IngredientRepository(JsonRepository):
-    def __init__(self, id_generator: IdGenerator, filepath):
+    def __init__(self, id_generator, filepath):
         super().__init__(id_generator, filepath)
 
     def update(self, ingredient_name, quantity):

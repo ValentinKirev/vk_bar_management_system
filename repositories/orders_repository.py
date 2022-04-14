@@ -1,11 +1,10 @@
 from entities.order_details import OrderDetails
 from utils.exceptions import ProductNotFoundError
-from utils.id_generator import IdGenerator
 from repositories.json_repository import JsonRepository
 
 
 class OrderRepository(JsonRepository):
-    def __init__(self, id_generator: IdGenerator, filepath):
+    def __init__(self, id_generator, filepath):
         super().__init__(id_generator, filepath)
 
     def update(self, order_id, ordered_detail: OrderDetails):

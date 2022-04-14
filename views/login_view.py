@@ -6,7 +6,7 @@ from controllers.main_controller import MainController
 from views.commands.login_command import LoginCommand
 
 
-class LoginView(ttk.Frame):
+class LoginView(tk.Canvas):
     def __init__(self, controller: MainController):
         super().__init__()
         self.controller = controller

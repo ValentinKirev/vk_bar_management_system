@@ -1,11 +1,9 @@
-from entities.product import Product
 from utils.exceptions import ProductNotFoundError
-from utils.id_generator import IdGenerator
 from repositories.json_repository import JsonRepository
 
 
 class ProductRepository(JsonRepository):
-    def __init__(self, id_generator: IdGenerator, filepath):
+    def __init__(self, id_generator, filepath):
         super().__init__(id_generator, filepath)
 
     def update(self, name, type, quantity, price, ingredients):

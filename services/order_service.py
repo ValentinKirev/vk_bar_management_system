@@ -10,8 +10,9 @@ class OrderService:
         self.product_repository = product_repository
 
     def open_new_order(self, order: Order):
+        self.orders_repository.load()
         new_order = self.orders_repository.create(order)
-        self.save_orders()
+        self.orders_repository.save()
         return new_order
 
     def get_all_orders(self):

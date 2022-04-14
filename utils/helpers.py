@@ -27,4 +27,3 @@ def center_window(window):
 def destroy_widgets(window):
     for child in window.winfo_children():
         child.destroy()
-

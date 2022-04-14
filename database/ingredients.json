@@ -1,33 +1,19 @@
 [
     {
         "id": 1,
-        "name": "coffee",
-        "quantity": 9,
-        "measure unit": "kilograms",
+        "name": "Milk",
+        "quantity": 10000,
+        "measure unit": "mililiters",
+        "expiration date": "2022.07.10",
         "_class": "Ingredient",
         "_module": "entities.ingredient"
     },
     {
         "id": 2,
-        "name": "coca-cola",
-        "quantity": 198,
-        "measure unit": "piece",
-        "_class": "Ingredient",
-        "_module": "entities.ingredient"
-    },
-    {
-        "id": 3,
-        "name": "milk",
-        "quantity": 10,
-        "measure unit": "liters",
-        "_class": "Ingredient",
-        "_module": "entities.ingredient"
-    },
-    {
-        "id": 4,
-        "name": "fanta",
-        "quantity": 200,
-        "measure unit": "piece",
+        "name": "Coffee",
+        "quantity": 3000,
+        "measure unit": "grams",
+        "expiration date": "2025.10.12",
         "_class": "Ingredient",
         "_module": "entities.ingredient"
     }

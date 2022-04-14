@@ -2,9 +2,10 @@
     {
         "id": 1,
         "operator": "Valentin Kirev",
+        "table number": 1,
         "ordered products": [],
-        "creation date": "2022-04-11",
-        "creation time": "20:03:44",
+        "creation date": "2022-04-13",
+        "creation time": "14:25:09",
         "total sum": 0,
         "_class": "Order",
         "_module": "entities.order"
@@ -12,9 +13,10 @@
     {
         "id": 2,
         "operator": "Valentin Kirev",
+        "table number": 1,
         "ordered products": [],
-        "creation date": "2022-04-11",
-        "creation time": "20:03:45",
+        "creation date": "2022-04-13",
+        "creation time": "17:53:43",
         "total sum": 0,
         "_class": "Order",
         "_module": "entities.order"

@@ -1,50 +1,32 @@
 [
     {
         "id": 1,
-        "name": "coca-cola",
-        "type": "Non alcohol drink",
-        "measure unit": "piece",
-        "quantity": 250,
-        "expiration date": "2023.12.08",
-        "price": 3,
+        "name": "Coffee espresso",
+        "type": "Hot drink",
+        "measure unit": "mililiters",
+        "quantity": 60.0,
+        "price": 2.2,
         "ingredients": [
-            {
-                "id": null,
-                "name": "coca-cola",
-                "quantity": 1,
-                "measure unit": "piece",
-                "_class": "Ingredient",
-                "_module": "entities.ingredient"
-            }
+            [
+                "Coffee",
+                0.007
+            ]
         ],
         "_class": "Product",
         "_module": "entities.product"
     },
     {
         "id": 2,
-        "name": "Cappuccino",
-        "type": "Hot Drink",
-        "measure unit": "piece",
-        "quantity": 5,
-        "expiration date": "2024.10.08",
-        "price": 3.5,
+        "name": "Hot milk",
+        "type": "Hot drink",
+        "measure unit": "mililiters",
+        "quantity": 200.0,
+        "price": 2.0,
         "ingredients": [
-            {
-                "id": 3,
-                "name": "milk",
-                "quantity": 10,
-                "measure unit": "liters",
-                "_class": "Ingredient",
-                "_module": "entities.ingredient"
-            },
-            {
-                "id": 1,
-                "name": "coffee",
-                "quantity": 6,
-                "measure unit": "kilograms",
-                "_class": "Ingredient",
-                "_module": "entities.ingredient"
-            }
+            [
+                "Milk",
+                200.0
+            ]
         ],
         "_class": "Product",
         "_module": "entities.product"
