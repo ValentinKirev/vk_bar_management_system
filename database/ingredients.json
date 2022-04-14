@@ -34,5 +34,14 @@
         "expiration date": "2023.06.15",
         "_class": "Ingredient",
         "_module": "entities.ingredient"
+    },
+    {
+        "id": 5,
+        "name": "Vodka Smirnoff",
+        "quantity": 3000,
+        "measure unit": "mililiters",
+        "expiration date": "2025.10.15",
+        "_class": "Ingredient",
+        "_module": "entities.ingredient"
     }
 ]

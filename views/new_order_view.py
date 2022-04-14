@@ -3,12 +3,14 @@ from tkinter import ttk
 
 from controllers.order_controller import OrderController
 from utils.helpers import center_window
+from views.commands.add_products_to_order_command import AddProductsToOrderCommand
 
 
 class NewOrderView(tk.Toplevel):
     def __init__(self, controller: OrderController):
         super().__init__()
         self.controller = controller
+        self.controller.view = self
 
         self.geometry('1000x600')
         self.configure(background='lightblue')

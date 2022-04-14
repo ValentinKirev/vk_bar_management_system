@@ -14,7 +14,7 @@ class AddQuantityForIngredientCommand:
         current_ingredient = None
         try:
             self.controller.view.current_ingredient = self.controller.view.get_selected_items()
-            current_ingredient= self.controller.view.current_ingredient
+            current_ingredient = self.controller.view.current_ingredient
         except IndexError:
             self.controller.view.string_var.set('You must select ingredient!')
         else:
