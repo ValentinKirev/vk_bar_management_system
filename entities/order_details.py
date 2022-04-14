@@ -3,9 +3,8 @@ from utils.validations import name_validation, only_letters_validation, integer_
 
 
 class OrderDetails:
-    def __init__(self, product: str, measure_unit: str, quantity: int, price: float, total_price=0):
+    def __init__(self, product: str, quantity: int, price: float, total_price=0):
         self.product = product
-        self.measure_unit = measure_unit
         self.quantity = quantity
         self.price = price
         self.total_price = self.price * self.quantity
@@ -55,17 +54,16 @@ class OrderDetails:
         self.__price = value
 
     def to_json(self):
-        return {'product': self.product, 'measure unit': self.measure_unit, 'quantity': self.quantity,
+        return {'product': self.product, 'quantity': self.quantity,
                 'price': round(self.price, 2), 'total price': round(self.total_price, 2),
                 '_class': self._class, '_module': self._module}
 
     @classmethod
     def from_json(cls, jsdict):
         product = jsdict['product']
-        measure_unit = jsdict['measure unit']
         quantity = jsdict['quantity']
         price = jsdict['price']
         total_price = jsdict['total price']
         _module = jsdict['_module']
         _class = jsdict['_class']
-        return cls(product, measure_unit, quantity, price, total_price)
+        return cls(product, quantity, price, total_price)

@@ -30,5 +30,37 @@
         ],
         "_class": "Product",
         "_module": "entities.product"
+    },
+    {
+        "id": 3,
+        "name": "Staroptramen",
+        "type": "Beer",
+        "measure unit": "mililiters",
+        "quantity": 500.0,
+        "price": 3.5,
+        "ingredients": [
+            [
+                "Staropramen",
+                1.0
+            ]
+        ],
+        "_class": "Product",
+        "_module": "entities.product"
+    },
+    {
+        "id": 4,
+        "name": "coca-cola",
+        "type": "Non alcohol drink",
+        "measure unit": "mililiters",
+        "quantity": 250.0,
+        "price": 2.5,
+        "ingredients": [
+            [
+                "coca-cola",
+                1.0
+            ]
+        ],
+        "_class": "Product",
+        "_module": "entities.product"
     }
 ]

@@ -16,5 +16,23 @@
         "expiration date": "2025.10.12",
         "_class": "Ingredient",
         "_module": "entities.ingredient"
+    },
+    {
+        "id": 3,
+        "name": "coca-cola",
+        "quantity": 120,
+        "measure unit": "piece",
+        "expiration date": "2023.12.15",
+        "_class": "Ingredient",
+        "_module": "entities.ingredient"
+    },
+    {
+        "id": 4,
+        "name": "Staropramen",
+        "quantity": 40,
+        "measure unit": "piece",
+        "expiration date": "2023.06.15",
+        "_class": "Ingredient",
+        "_module": "entities.ingredient"
     }
 ]
