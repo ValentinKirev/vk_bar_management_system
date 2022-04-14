@@ -36,11 +36,11 @@ class OrdersView(tk.Toplevel):
         self.frame.grid()
 
         # add menu
-        if operator.role == "Manager" or "HallManager":
+        if self.operator.role == "Manager" or "HallManager":
             menubar = tk.Menu(self)
             self.config(menu=menubar)
 
-            if operator.role == "Manager":
+            if self.operator.role == "Manager":
                 ingredients = tk.Menu(menubar, tearoff=False)
                 menubar.add_cascade(menu=ingredients, label='INGREDIENTS')
                 ingredients.add_command(label='Add ingredient', command=RenderAddIngredientCommand(self, self.operator,
@@ -56,12 +56,12 @@ class OrdersView(tk.Toplevel):
                 accounts = tk.Menu(menubar, tearoff=False)
                 menubar.add_cascade(menu=accounts, label='ACCOUNTS')
 
-            deliveries = tk.Menu(menubar, tearoff=False)
-            menubar.add_cascade(menu=deliveries, label='DELIVERIES')
-            cash_receipts = tk.Menu(menubar, tearoff=False)
-            menubar.add_cascade(menu=cash_receipts, label='CASH RECEIPTS')
-            revision = tk.Menu(menubar, tearoff=False)
-            menubar.add_cascade(menu=revision, label='MAKE REVISION')
+                deliveries = tk.Menu(menubar, tearoff=False)
+                menubar.add_cascade(menu=deliveries, label='DELIVERIES')
+                cash_receipts = tk.Menu(menubar, tearoff=False)
+                menubar.add_cascade(menu=cash_receipts, label='CASH RECEIPTS')
+                revision = tk.Menu(menubar, tearoff=False)
+                menubar.add_cascade(menu=revision, label='MAKE REVISION')
 
         column = 0
         row = 0

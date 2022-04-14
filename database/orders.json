@@ -9,5 +9,16 @@
         "total sum": 0,
         "_class": "Order",
         "_module": "entities.order"
+    },
+    {
+        "id": 2,
+        "operator": "Valentin kirev",
+        "table number": 2,
+        "ordered products": [],
+        "creation date": "2022-04-14",
+        "creation time": "20:29:27",
+        "total sum": 0,
+        "_class": "Order",
+        "_module": "entities.order"
     }
 ]

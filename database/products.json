@@ -62,5 +62,29 @@
         ],
         "_class": "Product",
         "_module": "entities.product"
+    },
+    {
+        "id": 5,
+        "name": "Valkata cocktail",
+        "type": "Cocktail",
+        "measure unit": "mililiters",
+        "quantity": 250.0,
+        "price": 7.5,
+        "ingredients": [
+            [
+                "Vodka Smirnoff",
+                50.0
+            ],
+            [
+                "coca-cola",
+                120.0
+            ],
+            [
+                "White rum Bacardi",
+                70.0
+            ]
+        ],
+        "_class": "Product",
+        "_module": "entities.product"
     }
 ]

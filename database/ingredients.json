@@ -43,5 +43,14 @@
         "expiration date": "2025.10.15",
         "_class": "Ingredient",
         "_module": "entities.ingredient"
+    },
+    {
+        "id": 6,
+        "name": "White rum Bacardi",
+        "quantity": 2000,
+        "measure unit": "mililiters",
+        "expiration date": "2022.10.10",
+        "_class": "Ingredient",
+        "_module": "entities.ingredient"
     }
 ]
